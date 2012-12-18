@@ -245,10 +245,12 @@ class VectorTemplate extends BaseTemplate {
 		<!-- /panel -->
 		<!-- footer -->
 		<div id="footer"<?php $this->html( 'userlangattributes' ) ?>>
+		<?php
+			/*
 			<?php foreach( $this->getFooterLinks() as $category => $links ): ?>
-				<ul id="footer-<?php echo $category ?>">
+				<ul id="footer-<!--?php echo $category ?>">
 					<?php foreach( $links as $link ): ?>
-						<li id="footer-<?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li>
+						<li id="footer-<!--?php echo $category ?>-<?php echo $link ?>"><?php $this->html( $link ) ?></li>
 					<?php endforeach; ?>
 				</ul>
 			<?php endforeach; ?>
@@ -266,6 +268,8 @@ class VectorTemplate extends BaseTemplate {
 				</ul>
 			<?php endif; ?>
 			<div style="clear:both"></div>
+			*/
+			?>
 		</div>
 		<!-- /footer -->
 		<?php $this->printTrail(); ?>

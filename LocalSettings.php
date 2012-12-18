@@ -147,3 +147,4 @@ function lfChangeMainPageURL( $sk, &$tpl ) {
         return true;
 }
 
+require_once("$IP/extensions/TeX/extension.php");

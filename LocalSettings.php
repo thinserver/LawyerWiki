@@ -36,7 +36,7 @@ $wgStylePath        = "$wgScriptPath/skins";
 
 ## The relative URL path to the logo.  Make sure you change this from the default,
 ## or else you'll overwrite your logo when you upgrade!
-$wgLogo             = "$wgStylePath/common/images/wiki.png";
+$wgLogo             = "$wgScriptPath/logo.png";
 
 ## UPO means: this is also a user preference option
 
@@ -139,3 +139,13 @@ require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 # Add more configuration options below.
 
 require_once( "SecretKey.php" );
+
+$wgHashedUploadDirectory = false;
+
+/* Change the main page url used in things like the logo to an absolute url */
+$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfChangeMainPageURL';
+function lfChangeMainPageURL( $sk, &$tpl ) {
+        $tpl->data['nav_urls']['mainpage']['href'] = "http://kanzlei/"; // Point the main page url to an absolute url
+        return true;
+}
+

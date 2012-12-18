@@ -147,4 +147,8 @@ function lfChangeMainPageURL( $sk, &$tpl ) {
         return true;
 }
 
+# TeX Extension
 require_once("$IP/extensions/TeX/extension.php");
+
+# SSL Client Certificate login
+require_once( "$IP/extensions/SSLClientAuthentication/ClientSSLAuth.php" );

@@ -53,9 +53,7 @@ $wgEmailAuthentication = true;
 ## Database settings
 $wgDBtype           = "mysql";
 $wgDBserver         = "localhost";
-$wgDBname           = "LawyerWiki";
-$wgDBuser           = "kanzleiserver";
-$wgDBpassword       = "kanzlei";
+$wgDBname           = "MediaWiki";
 
 # MySQL specific settings
 $wgDBprefix         = "";

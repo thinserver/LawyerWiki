@@ -553,33 +553,36 @@ class SkinTemplate extends Skin {
 		}
 		$returnto = wfArrayToCGI( $a );
 		if( $this->loggedin ) {
-			$personal_urls['userpage'] = array(
+/*			$personal_urls['userpage'] = array(
 				'text' => $this->username,
 				'href' => &$this->userpageUrlDetails['href'],
 				'class' => $this->userpageUrlDetails['exists'] ? false : 'new',
 				'active' => ( $this->userpageUrlDetails['href'] == $pageurl ),
 				'dir' => 'auto'
 			);
-			$usertalkUrlDetails = $this->makeTalkUrlDetails( $this->userpage );
+*/
+/*			$usertalkUrlDetails = $this->makeTalkUrlDetails( $this->userpage );
 			$personal_urls['mytalk'] = array(
 				'text' => $this->msg( 'mytalk' )->text(),
 				'href' => &$usertalkUrlDetails['href'],
 				'class' => $usertalkUrlDetails['exists'] ? false : 'new',
 				'active' => ( $usertalkUrlDetails['href'] == $pageurl )
 			);
+*/
 			$href = self::makeSpecialUrl( 'Preferences' );
 			$personal_urls['preferences'] = array(
-				'text' => $this->msg( 'mypreferences' )->text(),
+				'text' => $this->username . "'s " . $this->msg( 'mypreferences' )->text(),
 				'href' => $href,
 				'active' => ( $href == $pageurl )
 			);
-			$href = self::makeSpecialUrl( 'Watchlist' );
+			
+/*			$href = self::makeSpecialUrl( 'Watchlist' );
 			$personal_urls['watchlist'] = array(
 				'text' => $this->msg( 'mywatchlist' )->text(),
 				'href' => $href,
 				'active' => ( $href == $pageurl )
 			);
-
+*/
 			# We need to do an explicit check for Special:Contributions, as we
 			# have to match both the title, and the target, which could come
 			# from request values (Special:Contributions?target=Jimbo_Wales)
@@ -599,17 +602,19 @@ class SkinTemplate extends Skin {
 
 			$href = self::makeSpecialUrlSubpage( 'Contributions', $this->username );
 			$personal_urls['mycontris'] = array(
-				'text' => $this->msg( 'mycontris' )->text(),
+				'text' => $this->username . "'s " . $this->msg( 'mycontris' )->text(),
 				'href' => $href,
 				'active' => $active
 			);
+			
 			$personal_urls['logout'] = array(
-				'text' => $this->msg( 'userlogout' )->text(),
+/*				'text' => $this->msg( 'userlogout' )->text(),
 				'href' => self::makeSpecialUrl( 'Userlogout',
 					// userlogout link must always contain an & character, otherwise we might not be able
 					// to detect a buggy precaching proxy (bug 17790)
-					$title->isSpecial( 'Preferences' ) ? 'noreturnto' : $returnto
-				),
+					$title->isSpecial( 'Preferences' ) ? 'noreturnto' : $returnto */
+				"text" => "Zum Desktop",
+				"href" => "/",
 				'active' => false
 			);
 		} else {

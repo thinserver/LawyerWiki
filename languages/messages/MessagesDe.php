@@ -2635,7 +2635,7 @@ $1',
 # Contributions
 'contributions' => 'Benutzerbeiträge',
 'contributions-title' => 'Benutzerbeiträge von „$1“',
-'mycontris' => 'Eigene Beiträge',
+'mycontris' => 'Beiträge',
 'contribsub2' => 'Von $1 ($2)',
 'nocontribs' => 'Es wurden keine Benutzerbeiträge mit diesen Kriterien gefunden.',
 'uctop' => '(aktuell)',

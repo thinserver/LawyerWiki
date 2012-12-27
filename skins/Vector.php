@@ -246,7 +246,7 @@ class VectorTemplate extends BaseTemplate {
 		<!-- footer -->
 		<div id="footer"<?php $this->html( 'userlangattributes' ) ?>>
 		<?php
-			/*
+			/* footer removed by Matthias: we don't need the footer
 			<?php foreach( $this->getFooterLinks() as $category => $links ): ?>
 				<ul id="footer-<!--?php echo $category ?>">
 					<?php foreach( $links as $link ): ?>

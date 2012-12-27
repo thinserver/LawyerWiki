@@ -143,7 +143,7 @@ $wgHashedUploadDirectory = false;
 /* Change the main page url used in things like the logo to an absolute url */
 $wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'lfChangeMainPageURL';
 function lfChangeMainPageURL( $sk, &$tpl ) {
-        $tpl->data['nav_urls']['mainpage']['href'] = "http://kanzlei/"; // Point the main page url to an absolute url
+        $tpl->data['nav_urls']['mainpage']['href'] = "/"; // Point the main page url to an absolute url
         return true;
 }
 

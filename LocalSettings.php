@@ -29,7 +29,7 @@ $wgScriptPath       = "/LawyerWiki";
 $wgScriptExtension  = ".php";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer           = "https://kanzlei.local";
+$wgServer           = "https://".$_SERVER['SERVER_NAME'];
 
 ## The relative URL path to the skins directory
 $wgStylePath        = "$wgScriptPath/skins";

@@ -492,8 +492,7 @@ function wfAppendQuery( $url, $query ) {
 }
 
 /**
- * Expand a potentially local URL to a fully-qualified URL.  Assumes $wgServer
- * is correct.
+ * Expand a potentially local URL to a fully-qualified URL.  Assumes $wgServer is a fully-qualified URL.
  *
  * The meaning of the PROTO_* constants is as follows:
  * PROTO_HTTP: Output a URL starting with http://
